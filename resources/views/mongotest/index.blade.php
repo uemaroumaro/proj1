@@ -6,7 +6,7 @@
     </head>
     <body>
         @include('navbar')
-        <div><h1>t_userの内容</h1>
+        <div><h1>t_usersの内容</h1>
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>

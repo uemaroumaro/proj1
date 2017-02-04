@@ -12,6 +12,10 @@
                 <p class="lead">The page conducts tests of<br> basic operation of MongoDB.</p>
             </div>
             <div class="starter-template">
+                <h1><a href="graphtest">GraphTest</a></h1>
+                <p class="lead">The page conducts tests of<br> drowing graph by jquery.</p>
+            </div>
+            <div class="starter-template">
                 <h1><a href="phpinfo">PhpInfo</a></h1>
                 <p class="lead">You can see contains of phpInfo on the page.</p>
             </div>

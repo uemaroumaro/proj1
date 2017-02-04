@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('mongotest', 'MongotestController@getIndex');
+Route::get('graphtest', 'GraphTestController@getIndex');
 Route::get('phpinfo', 'PhpinfoController@getIndex');
 
 
