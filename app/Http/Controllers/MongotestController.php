@@ -5,12 +5,12 @@
  * and open the template in the editor.
  */
 use App\MongoDoc\TUser;
-class HelloController extends Controller
+class MongotestController extends Controller
 {
-    public function index()
+    public function getIndex()
     {
-        
          $users = TUser::all();
-        return view('mongo_test',['users' => $users]);
+        return view('mongotest/index',['users' => $users]);
     }
+    
 }
