@@ -5,12 +5,14 @@
  * and open the template in the editor.
  */
 use App\MongoDoc\TUser;
-class MongotestController extends Controller
+use App\MongoDoc\DataTest;
+class MongoTestController extends Controller
 {
     public function getIndex()
     {
-         $users = TUser::all();
-        return view('mongotest/index',['users' => $users]);
+        $data_test = DataTest::get();
+        //$users = TUser::all();
+        return view('mongotest/index',['data_test' => $data_test]);
     }
     
 }

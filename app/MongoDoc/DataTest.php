@@ -10,6 +10,6 @@ namespace App\MongoDoc;
 
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class TUser extends Eloquent {
-     protected $table = 't_user';
+class DataTest extends Eloquent {
+     protected $table = 'data_test';
 }

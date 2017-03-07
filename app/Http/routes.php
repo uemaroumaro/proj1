@@ -16,7 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('mongotest', 'MongotestController@getIndex');
+
+Route::get('mqtt', 'MQTTController@getIndex');
 Route::get('graphtest', 'GraphTestController@getIndex');
+Route::get('getjson', 'GraphTestController@getJson');
 Route::get('phpinfo', 'PhpinfoController@getIndex');
 
 
