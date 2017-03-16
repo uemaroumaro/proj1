@@ -25,12 +25,14 @@ class GraphTestController extends Controller
          $barChartData = [
                 'labels'=> $labels,
                 'datasets'=>[ [
+                        'type'=>'bar',
                         'label'=>'data_line',
                         'data'=> $data,
                         'borderColor'=>"rgba(254,97,132,0.8)",
                         'backgroundColor'=>"rgba(254,97,132,0.5)"
                     ],
                     [
+                        'type'=>'line',
                         'label'=> 'sample-bar',
                         'data'=> ['0.3', '0.1', '0.1', '0.3', '0.4', '0.2', '0.0',
                             '0.2', '0.3', '0.11', '0.5', '0.2', '0.5', '0.4',
