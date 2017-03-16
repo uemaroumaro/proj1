@@ -11,6 +11,7 @@ use App\MyLibs\phpMQTT;
 class MQTTController extends Controller {
 
     public function getIndex() {
+        
         $mqtt_host = "119.27.36.192"; # MQTT ブローカー
         $mqtt_port = 1883; # MQTT ポート番号
         $mqtt_clientid = "d:quickstart:MyDevice:me.juge.mqtt.test"; # クライアントID
