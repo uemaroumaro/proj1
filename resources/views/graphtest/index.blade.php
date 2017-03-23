@@ -69,7 +69,7 @@
                         alert('データが0件でした');
                     var len = data.length;
                     //alert(data["datasets"][0]["label"]);
-                    draw(data);
+                    draw(Data);
                 }
             })
             ).done(function(){

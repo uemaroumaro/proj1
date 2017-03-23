@@ -6,6 +6,7 @@
  */
 use App\MongoDoc\TUser;
 use App\MongoDoc\DataTest;
+use App\MongoDoc\ElectricData;
 class GraphTestController extends Controller
 {
     public function getIndex()
@@ -14,14 +15,15 @@ class GraphTestController extends Controller
     }
      public function getJson()
     {
-         
-         $data_test = DataTest::orderBy('datetime', 'asc')->take(10)->get();
+         $data_test = ElectricData::orderBy('datetime', 'desc')->take(20)->get();
+         //$data_test = ElectricData::get();
          $labels=array();
          $data=array();
          foreach ($data_test as $val){
              array_push($labels,$val["datetime"]);
-             array_push($data,$val["decimal"]);
+             array_push($data,$val["current_val1"]);
          }
+         
          $barChartData = [
                 'labels'=> $labels,
                 'datasets'=>[ [
@@ -30,17 +32,6 @@ class GraphTestController extends Controller
                         'data'=> $data,
                         'borderColor'=>"rgba(254,97,132,0.8)",
                         'backgroundColor'=>"rgba(254,97,132,0.5)"
-                    ],
-                    [
-                        'type'=>'line',
-                        'label'=> 'sample-bar',
-                        'data'=> ['0.3', '0.1', '0.1', '0.3', '0.4', '0.2', '0.0',
-                            '0.2', '0.3', '0.11', '0.5', '0.2', '0.5', '0.4',
-                            '0.0', '0.3', '0.7', '0.3', '0.6', '0.4', '0.9',
-                            '0.7', '0.4', '0.8', '0.7', '0.4', '0.7', '0.8'
-                        ],
-                        'borderColor'=> "rgba(54,164,235,0.8)",
-                        'backgroundColor'=> "rgba(54,164,235,0.5)",
                     ]]
                 ];
         return response()->json($barChartData);
